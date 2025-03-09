@@ -96,8 +96,8 @@ local function highlight(plr)
         local highlight = Instance.new("Highlight")
         highlight.Parent = plr.Character
         highlight.FillColor = Color3.new(0.411765, 0.501961, 1.000000)
-        highlight.OutlineColor = Color3.new(250, 0, 0)
-        highlight.FillTransparency = 0.6
+        highlight.OutlineColor = Color3.new(0, 0, 0)
+        highlight.FillTransparency = 0
         highlight.OutlineTransparency = 0
     end
 end
@@ -116,18 +116,18 @@ ImageButton.Parent = Sigmaballs
 ImageButton.Active = true
 ImageButton.Draggable = true
 ImageButton.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-ImageButton.BackgroundTransparency = 0.35
-ImageButton.Size = UDim2.new(0, 90, 0, 90)
+ImageButton.BackgroundTransparency = 0.2
+ImageButton.Size = UDim2.new(0, 0, 0, 0)
 ImageButton.Image = "rbxassetid://18875659773"
 ImageButton.Position = UDim2.new(0.5, -45, 0.5, -45)
 
-Ui2corner.CornerRadius = UDim.new(0.2, 0)
+Ui2corner.CornerRadius = UDim.new(0.8, 0)
 Ui2corner.Parent = ImageButton
 
 -- Toggling script when Q is pressed
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
-    if input.KeyCode == Enum.KeyCode.Q then
+    if input.KeyCode == Enum.KeyCode.C then
         enabled = not enabled
         if enabled then
             ImageButton.Image = "rbxassetid://18875659773"
